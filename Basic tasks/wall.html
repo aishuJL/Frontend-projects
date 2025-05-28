@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wall</title>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>My Wall</h1>
+        </header>
+
+        <section>
+            <h2>Announcements and Notifications</h2>
+            <ul id="announcements-list">
+                <li>Exam Schedule: Math exam on 20th December.</li>
+                <li>Project Deadline: Final project submission due by 25th December.</li>
+                <li>System Alert: Portal maintenance on 15th December.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Personalized Content</h2>
+            <p>Welcome back, <strong>User</strong>! You are enrolled in the following courses:</p>
+            <ul id="courses-list">
+                <li>Computer Networks</li>
+                <li>Data Structures</li>
+                <li>Software Engineering</li>
+            </ul>
+            <p>Your next exam: Computer Networks, 20th December.</p>
+        </section>
+
+        <section>
+            <h2>Interactive Communication</h2>
+            <textarea id="message-board" placeholder="Share your thoughts..."></textarea>
+            <button onclick="postMessage()">Post Message</button>
+            <div id="messages">
+            </div>
+        </section>
+
+        <section>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#exams">Exams</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#study-materials">Study Materials</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Activity Feed</h2>
+            <ul id="activity-feed">
+                <li>Assignment 1 submitted for Computer Networks.</li>
+                <li>New announcement posted: Software Engineering exam date updated.</li>
+                <li>You commented on the Data Structures discussion board.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Resource Sharing</h2>
+            <input type="file" id="file-upload">
+            <button onclick="uploadResource()">Upload Resource</button>
+            <div id="resources">
+            </div>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <br><br>
+
+                <label for="id">ID:</label>
+                <input type="text" id="id" placeholder="Enter your ID">
+                <br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function postMessage() {
+            const message = document.getElementById("message-board").value;
+            if (message.trim()) {
+                const messageDiv = document.createElement("div");
+                messageDiv.textContent = message;
+                document.getElementById("messages").appendChild(messageDiv);
+                document.getElementById("message-board").value = '';  
+            } else {
+                alert("Please enter a message!");
+            }
+        }
+
+        function uploadResource() {
+            const fileInput = document.getElementById("file-upload");
+            if (fileInput.files.length > 0) {
+                const fileName = fileInput.files[0].name;
+                const resourceDiv = document.createElement("div");
+                resourceDiv.textContent = `Shared Resource: ${fileName}`;
+                document.getElementById("resources").appendChild(resourceDiv);
+            } else {
+                alert("Please select a file to upload!");
+            }
+        }
+    </script>
+</body>
+</html>

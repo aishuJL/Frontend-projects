@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: #be6161;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #000000;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #000000;
+            font-size: 16px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #cccccc;
+            font-size: 16px;
+            background-color: #d4d389;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #2575fc;
+            outline: none;
+        }
+
+        .inline-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .inline-group input[type="radio"] {
+            width: auto;
+        }
+
+        button {
+            width: 48%;
+            padding: 12px 0;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"] {
+            background-color: #fc2525;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #6a11cb;
+        }
+
+        button[type="reset"] {
+            background-color: #fbff08d0;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #ffeb0c;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                padding: 25px;
+            }
+
+            .form-footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <h1 id="registerTitle" name="registerTitle">Registration Form</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" placeholder="ID" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <label for="email">E-Mail ID:</label>
+        <input type="email" id="email" name="email" placeholder="E-Mail ID" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <div class="inline-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+        </div>
+
+        <label for="address">College Address:</label>
+        <textarea id="address" name="address" placeholder="College Address" required></textarea>
+
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+            <option value="cse">Computer Science Engineering</option>
+            <option value="ece">Electronics and Communication Engineering</option>
+            <option value="me">Mechanical Engineering</option>
+            <option value="ee">Electrical Engineering</option>
+        </select>
+
+        <label>Technical Skills:</label>
+        <div class="inline-group">
+            <input type="checkbox" id="c" name="skills" value="C">
+            <label for="c">C</label>
+            <input type="checkbox" id="java" name="skills" value="Java">
+            <label for="java">Java</label>
+            <input type="checkbox" id="python" name="skills" value="Python">
+            <label for="python">Python</label>
+            <input type="checkbox" id="jsp" name="skills" value="JSP">
+            <label for="jsp">JSP</label>
+        </div>
+
+        <label for="resume">Resume Upload:</label>
+        <input type="file" id="resume" name="resume" required>
+
+        <div class="form-footer">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
+

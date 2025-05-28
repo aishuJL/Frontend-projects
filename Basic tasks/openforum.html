@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="pageTitle">Open Forum Page</title>
+</head>
+<body>
+
+<table width="100%" cellspacing="0" cellpadding="10">
+    <tr>
+        <td align="center" id="welcomeSection">
+            <h1 id="welcomeHeading">Welcome to the Open Forum</h1>
+            <p id="welcomeMessage">Express your opinions, share ideas, and discuss topics of interest!</p>
+        </td>
+    </tr>
+</table>
+
+<table align="center" width="80%" cellspacing="10" cellpadding="10">
+    <tr>
+        <td width="70%" valign="top" id="discussionSection">
+            <h3 align="center" id="activeDiscussionsHeading">Active Discussions</h3>
+            <table border="1" width="100%" cellspacing="0" cellpadding="5" id="discussionTable">
+                <tr>
+                    <th id="topicHeading">Topic</th>
+                    <th id="startedByHeading">Started By</th>
+                    <th id="repliesHeading">Replies</th>
+                </tr>
+                <tr>
+                    <td id="discussion1Topic">What is the future of AI?</td>
+                    <td id="discussion1Author">John Doe</td>
+                    <td align="center" id="discussion1Replies">12</td>
+                </tr>
+                <tr>
+                    <td id="discussion2Topic">Tips for effective learning</td>
+                    <td id="discussion2Author">Jane Smith</td>
+                    <td align="center" id="discussion2Replies">8</td>
+                </tr>
+                <tr>
+                    <td id="discussion3Topic">Best programming languages in 2024</td>
+                    <td id="discussion3Author">Sam Brown</td>
+                    <td align="center" id="discussion3Replies">15</td>
+                </tr>
+                <tr>
+                    <td id="discussion4Topic">Climate change and its impact</td>
+                    <td id="discussion4Author">Lisa Adams</td>
+                    <td align="center" id="discussion4Replies">6</td>
+                </tr>
+            </table>
+        </td>
+        <td width="30%" valign="top" id="formSection">
+            <h3 align="center" id="shareIdeasHeading">Share Your Ideas</h3>
+            <form method="post" id="ideaForm">
+                <table width="100%" cellspacing="5">
+                    <tr>
+                        <td id="nameLabel">Name:</td>
+                        <td><input type="text" placeholder="Name" id="nameInput" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td id="topicLabel">Topic:</td>
+                        <td><input type="text" placeholder="Title" id="topicInput" name="topic"></td>
+                    </tr>
+                    <tr>
+                        <td id="messageLabel">Message:</td>
+                        <td><textarea placeholder="Share your opinion" rows="4" cols="20" id="messageInput" name="message"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Post" id="submitButton" name="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
