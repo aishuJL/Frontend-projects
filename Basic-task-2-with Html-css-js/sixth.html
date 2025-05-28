@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Message Replacement</title>
+</head>
+<body>
+
+    <h2>Message Replacement</h2>
+    <label>Enter Text:</label><br>
+    <textarea id="message" placeholder="Enter your message here"></textarea><br><br>
+    <label>Word to Replace</label><br>
+    <input type="text" id="searchWord" placeholder="Enter word to search"><br><br>
+    <br>
+    <button onclick="showMessage()">Show Message</button>
+    <button onclick="replaceWord()">Replace Word</button>
+    
+    <p id="output"></p>
+
+    <script>
+        function showMessage() {
+            let message = document.getElementById("message").value;
+            document.getElementById("output").innerText = message;
+        }
+
+        function replaceWord() {
+            let message = document.getElementById("message").value;
+            let searchWord = document.getElementById("searchWord").value.trim();
+            
+            if (!searchWord) {
+                alert("Please enter a word to search.");
+                return;
+            }
+
+            let replaceWith = prompt("Enter the replacement word:");
+            if (replaceWith === null) return;
+
+            let regex = new RegExp(searchWord, "gi");  
+            let updatedMessage = message.replace(regex, replaceWith);
+            
+            document.getElementById("output").innerText = updatedMessage;
+        }
+    </script>
+</body>
+</html>

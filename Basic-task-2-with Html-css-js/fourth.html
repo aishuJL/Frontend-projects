@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Search</title>
+</head>
+<body>
+
+    <h2>Search for a Word or Phrase</h2>
+    <label for="inputString">Enter a string:</label>
+    <textarea id="inputString" rows="4" cols="50" placeholder="Enter the string here"></textarea><br><br>
+    <label for="searchWord">Enter word/phrase to search for:</label>
+    <input type="text" id="searchWord" placeholder="Enter the word/phrase"><br><br>
+    <button onclick="searchWord()">Search</button>
+    <p id="result"></p>
+
+    <script>
+        function searchWord() {
+            const inputString = document.getElementById('inputString').value;
+            const searchWord = document.getElementById('searchWord').value;
+            const regex = new RegExp(searchWord, 'i'); 
+            const resultParagraph = document.getElementById('result');
+            if (regex.test(inputString)) {
+                resultParagraph.textContent = "Word Found";
+                resultParagraph.style.color = "green";
+            } else {
+                resultParagraph.textContent = "Word Not Found";
+                resultParagraph.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

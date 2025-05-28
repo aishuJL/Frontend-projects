@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Number Validator</title>
+</head>
+<body>
+    <h2>Phone Number Validator</h2>
+    <label for="phoneInput"><strong>Enter Phone Number (xxx-xxx-xxxx):</strong></label><br>
+    <input type="text" id="phoneInput" placeholder="Enter phone number"><br><br>
+    <button onclick="validatePhoneNumber()">Validate Phone Number</button>
+    <p id="result"></p>
+
+    <script>
+        function validatePhoneNumber() {
+            const phoneNumber = document.getElementById('phoneInput').value;
+            const result = document.getElementById('result');
+            const regex = /^\d{3}-\d{3}-\d{4}$/;  
+            if (regex.test(phoneNumber)) {
+                result.textContent = "Valid Phone Number";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Invalid Phone Number";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
