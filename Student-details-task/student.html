@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details and Grade</title>
+    <script src="student.js"></script>
+
+</head>
+<body>
+    <h1>Student Details Form</h1>
+    <form id="studentForm" onsubmit="return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter Name" required><br><br>
+
+        <label for="rollno">Roll No:</label>
+        <input type="text" id="rollno" placeholder="Enter Roll No" required><br><br>
+
+        <label>Gender:</label>
+        <div class="gender-container">
+            <input type="radio" name="gender" value="Male" id="male" required>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female" id="female">
+            <label for="female">Female</label>
+        </div><br>
+
+        <label for="branch">Branch:</label>
+        <select id="branch" required>
+            <option value="CSE">CSE</option>
+            <option value="ME">EEE</option>
+            <option value="ME">CE</option>
+            <option value="ECE">ECE</option>
+            <option value="ME">ME</option>
+        </select><br><br>
+
+        <label>Marks (out of 100):</label><br>
+        <input type="number" id="marks1" placeholder="Subject 1" required><br>
+        <input type="number" id="marks2" placeholder="Subject 2" required><br>
+        <input type="number" id="marks3" placeholder="Subject 3" required><br>
+        <input type="number" id="marks4" placeholder="Subject 4" required><br>
+        <input type="number" id="marks5" placeholder="Subject 5" required><br><br>
+
+        <button type="button" onclick="showDetails()">Show Details</button>
+        <button type="button" onclick="calculateGrade()">Calculate Grade</button>
+    </form>
+
+    <h3>Details:</h3>
+    <p id="detailsParagraph"></p>
+
+    <h3>Grade:</h3>
+    <p id="gradeParagraph"></p>
+</body>
+</html>
